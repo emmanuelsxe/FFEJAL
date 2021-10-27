@@ -1,0 +1,19 @@
+h1,h2 {
+  text-align: center;
+
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+a {
+  color: darkorange;
+  text-decoration: none;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: bold;
+}
+
+#borrar {
+  background-color: tomato;
+  color: black;
+  font-weight: bolder;
+  align-items: flex-end;
+}
