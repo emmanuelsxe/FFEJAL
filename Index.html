@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/c53008b00f.js" crossorigin="anonymous"></script>
+    <title>Sistema de Jueceo</title>
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de Jueceo</h1>
+    </header>
+
+
+    <form method="POST" class="inicio-sesion">
+        <h1>Iniciar Sesión</h1>
+
+        <div class="contenedor">
+            <table>
+                <tr>
+                    <td>
+                        <div class="input-contenedor">
+                            <i class="fas fa-envelope"></i>
+                    </td>
+
+                    <td>
+                        <label for"mail">
+                            <input type="email" id="mail" name="user_mail" placeholder="Ingresa tu correo" required>
+                        </label>
+                    </td>
+                </tr>
+        </div>
+
+        <tr>
+            <td>
+                <div class="input-contenedor">
+                    <i class="fas fa-key"></i>
+            </td>
+
+            <td>
+                <label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                </label>
+            </td>
+
+            <td>
+                <button class="botonMostrar" type="button" onclick="mostrarContrasena()">Mostrar
+                    Contraseña</button>
+                <script>
+                    function mostrarContrasena() {
+                        var tipo = document.getElementById("password");
+                        if (tipo.type == "password") {
+                            tipo.type = "text";
+                        } else {
+                            tipo.type = "password";
+                        }
+                    }
+                </script>
+            </td>
+        </tr>
+        </div>
+
+        <button type="submit" name="iniciar_sesion" value="iniciar_sesion">Iniciar Sesión </button>
+
+
+        </div>
+        </table>
+
+
+    </form>
+
+    <br><br>
+
+    <section>
+        ¿Aún no te haz registrado?
+        <a href="RegistroPrimera.html"> Ingresa aquí para Registrarte </a>
+    </section>
+</body>
+
+</html>
