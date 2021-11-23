@@ -34,3 +34,7 @@ table {
     border-color: gray;
 
 } 
+
+label{
+  font-weight: bold;
+}

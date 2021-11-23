@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap');
+    </style>
+
+    <script type="text/javascript" src="js/categorias.js"></script>
+    <title>Registro de Participantes</title>
+</head>
+
+<body>
+    <h1>REGISTRO FFEJAL</h1>
+    <h2>Información Personal</h2>
+
+    <form action="" method="post">
+
+        <p> Ingresa tu información personal. </p>
+
+
+        <div>
+            <label>
+                Nombre* <br>
+                <input type="text" name="name" placeholder="Nombre(s)" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Apellido Paterno* <br>
+                <input type="text" name="apellidoPaterno" placeholder="Apellido Paterno" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Apellido Materno <br>
+                <input type="text" name="apellidoMaterno" placeholder="Apellido Materno">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Sexo* <br>
+                <input type="radio" name="sexo" value="Hombre" required> Hombre <br>
+            </label>
+
+            <label>
+                <input type="radio" name="sexo" value="Mujer"> Mujer
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Lugar de Nacimiento* <br>
+                <select name="estado" required>
+                    <option value disabled selected>Selecciona el estado</option>
+                    <option value="Aguascalientes">Aguascalientes</option>
+                    <option value="Baja California">Baja California</option>
+                    <option value="Baja California Sur">Baja California Sur</option>
+                    <option value="Campeche">Campeche</option>
+                    <option value="Chiapas">Chiapas</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="CDMX">Ciudad de México</option>
+                    <option value="Coahuila">Coahuila</option>
+                    <option value="Colima">Colima</option>
+                    <option value="Durango">Durango</option>
+                    <option value="Estado de México">Estado de México</option>
+                    <option value="Guanajuato">Guanajuato</option>
+                    <option value="Guerrero">Guerrero</option>
+                    <option value="Hidalgo">Hidalgo</option>
+                    <option value="Jalisco">Jalisco</option>
+                    <option value="Michoacán">Michoacán</option>
+                    <option value="Morelos">Morelos</option>
+                    <option value="Nayarit">Nayarit</option>
+                    <option value="Nuevo León">Nuevo León</option>
+                    <option value="Oaxaca">Oaxaca</option>
+                    <option value="Puebla">Puebla</option>
+                    <option value="Querétaro">Querétaro</option>
+                    <option value="Quintana Roo">Quintana Roo</option>
+                    <option value="San Luis Potosí">San Luis Potosí</option>
+                    <option value="Sinaloa">Sinaloa</option>
+                    <option value="Sonora">Sonora</option>
+                    <option value="Tabasco">Tabasco</option>
+                    <option value="Tamaulipas">Tamaulipas</option>
+                    <option value="Tlaxcala">Tlaxcala</option>
+                    <option value="Veracruz">Veracruz</option>
+                    <option value="Yucatán">Yucatán</option>
+                    <option value="Zacatecas">Zacatecas</option>
+
+                </select>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Fecha de Nacimiento* <br>
+                <input type="date" name="fechaNacimiento" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Edad* <br>
+                <input type="number" name="edad" placeholder="Edad" min="0" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                CURP* <br>
+                <input type="text" name="curp" placeholder="CURP" minlength="18" maxlength="18" required>
+                <br>
+                Sí no conoces tu CURP, puedes consultarla <a href="https://www.gob.mx/curp/" target="_blank"
+                    title="CURP"> aqui </a>
+
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Grado máximo de estudios* <br>
+                <select name="gradoEstudios" required>
+                    <option value disabled selected> Elige </option>
+                    <option value="Primaria"> Primaria </option>
+                    <option value="Secundaria"> Secundaria </option>
+                    <option value="Preparatoria"> Preparatoria/Bachillerato </option>
+                    <option value="Licenciatura"> Licenciatura </option>
+                    <option value="Maestria"> Maestria </option>
+                    <option value="Doctorado"> Doctorado </option>
+                    <option value="No Estudios"> No cuento con estudios </option>
+                </select>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                ¿Actualmente estas estudiando? <br>
+                <input type="radio" name="estudio" value="Si" required> Si
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="estudio" value="No"> No
+            </label>
+
+        </div>
+
+        <br>
+
+        <h2>Datos de contacto</h2>
+
+        <div>
+            <label>
+                Correo electronico* <br>
+                <input type="email" name="correoElectronico" placeholder="tucorreo@ejemplo.com" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Télefono Celular* <br>
+                <input type="tel" name="celular" placeholder="Número de celular" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Télefono Fijo <br>
+                <input type="tel" name="fijo" placeholder="Número Fijo (casa, negocio)">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Facebook <br>
+                <input type="text" name="facebook" placeholder="Facebook">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Twitter <br>
+                <input type="text" name="twitter" placeholder="Twitter">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                ¿Por cual medio te enteraste del evento?* <br>
+                <input type="radio" name="medio" value="MedioImpreso" required> Medio Impreso
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="medio" value="RedesSociales"> Redes Sociales
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="medio" value="Recomendacion"> Recomendación
+            </label>
+        </div>
+
+        <br>
+
+        <h2>Información de Domicilio </h2>
+
+        <br>
+
+        <p> Ingresa la información de tu domicilio </p>
+
+        <br>
+
+        <div>
+            <label>
+                Calle* <br>
+                <input type="text" name="calleConcur" placeholder="Calle" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Numero exterior* <br>
+                <input type="text" name="numExtConcur" placeholder="Número Exterior" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Numero Interior <br>
+                <input type="text" name="numIntConcur" placeholder="Número Interior">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Colonia* <br>
+                <input type="text" name="coloniaConcur" placeholder="Colonia" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Municipio / Alcaldia* <br>
+                <input type="text" name="municipioConcur" placeholder="Municipio / Alcaldia" required>
+            </label>
+
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Estado* <br>
+            </label>
+
+            <select name="estadoConcur" required>
+                <option value disabled selected>Selecciona el estado</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja California">Baja California</option>
+                <option value="Baja California Sur">Baja California Sur</option>
+                <option value="Campeche">Campeche</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="CDMX">Ciudad de México</option>
+                <option value="Coahuila">Coahuila</option>
+                <option value="Colima">Colima</option>
+                <option value="Durango">Durango</option>
+                <option value="Estado de México">Estado de México</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
+                <option value="Jalisco">Jalisco</option>
+                <option value="Michoacán">Michoacán</option>
+                <option value="Morelos">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo León">Nuevo León</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Quintana Roo">Quintana Roo</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatán">Yucatán</option>
+                <option value="Zacatecas">Zacatecas</option>
+
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Código Postal* <br>
+            </label>
+
+            <input type="text" name="cpConcur" placeholder="Código Postal" required>
+        </div>
+
+        <br>
+
+        <h2>Información del Centro de Entrenamiento</h2>
+
+        <br>
+
+        <p> Ingresa la información del gimnasio o deportivo donde entrenas. </p>
+
+        <br>
+
+        <div>
+            <label>
+                Nombre del Gimnasio o Deportivo <br>
+                <input type="text" name="nombreGimnasio" placeholder="Gimansio o Deportivo">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Calle <br>
+                <input type="text" name="calleGimnasio" placeholder="Calle">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Numero exterior <br>
+                <input type="text" name="numExtGim" placeholder="Número Exterior">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Numero Interior <br>
+                <input type="text" name="numIntGim" placeholder="Número Interior">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Colonia <br>
+                <input type="text" name="coloniaGim" placeholder="Colonia">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Municipio / Alcaldia <br>
+                <input type="text" name="municipioGim" placeholder="Municipio / Alcaldia">
+            </label>
+
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Estado <br>
+            </label>
+
+            <select name="estadoGim">
+                <option value disabled selected>Selecciona el estado</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja California">Baja California</option>
+                <option value="Baja California Sur">Baja California Sur</option>
+                <option value="Campeche">Campeche</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="CDMX">Ciudad de México</option>
+                <option value="Coahuila">Coahuila</option>
+                <option value="Colima">Colima</option>
+                <option value="Durango">Durango</option>
+                <option value="Estado de México">Estado de México</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
+                <option value="Jalisco">Jalisco</option>
+                <option value="Michoacán">Michoacán</option>
+                <option value="Morelos">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo León">Nuevo León</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Quintana Roo">Quintana Roo</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatán">Yucatán</option>
+                <option value="Zacatecas">Zacatecas</option>
+
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Código Postal <br>
+                <input type="text" name="cpGim" placeholder="Código Postal">
+            </label>
+
+        </div>
+
+        <br>
+
+
+        <h2>Datos del Entrenador</h2>
+
+        <div>
+            <label>
+                Nombre del Entrenador* <br>
+                <input type="text" name="nombreEntrenador" placeholder="Nombre del Entrenador" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Apellido Paterno* <br>
+                <input type="text" name="apPaternoEntrenador" placeholder="Apellido Paterno" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Apellido Materno <br>
+                <input type="text" name="apMaternoEntrenador" placeholder="Apellido Materno">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Celular <br>
+                <input type="tel" name="celEntrenador" placeholder="Celular">
+            </label>
+        </div>
+
+        <br>
+
+        <h2>Categorias</h2>
+
+        <br>
+
+        <p>Selecciona la asociación o Estado que representas.</p>
+        <p>Recuerda que solo puedes participar en un máximo de tres categorias</p>
+
+        <div>
+            <label>
+                ¿Cuál estado o asociación representas?* <br>
+            </label>
+
+            <select name="estadoRepresentado" required>
+                <option value disabled selected>Selecciona el estado</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja California">Baja California</option>
+                <option value="Baja California Sur">Baja California Sur</option>
+                <option value="Campeche">Campeche</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="CDMX">Ciudad de México</option>
+                <option value="Coahuila">Coahuila</option>
+                <option value="Colima">Colima</option>
+                <option value="Durango">Durango</option>
+                <option value="Estado de México">Estado de México</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
+                <option value="Jalisco">Jalisco</option>
+                <option value="Michoacán">Michoacán</option>
+                <option value="Morelos">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo León">Nuevo León</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Quintana Roo">Quintana Roo</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatán">Yucatán</option>
+                <option value="Zacatecas">Zacatecas</option>
+
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Selecciona la primer categoria para competir.* <br>
+            </label>
+            <select name="categoria1" required>
+                <option value disabled selected>Selecciona el numero de categorias</option>
+                <option value="1"> Fisicoculturismo Varonil hasta 65 Kg </option>
+                <option value="2"> Fisicoculturismo Varonil hasta 70 Kg </option>
+                <option value="3"> Fisicoculturismo Varonil hasta 75 Kg </option>
+                <option value="4"> Fisicoculturismo Varonil hasta 80 Kg </option>
+                <option value="5"> Fisicoculturismo Varonil hasta 85 Kg </option>
+                <option value="6"> Fisicoculturismo Varonil hasta 90 Kg </option>
+                <option value="7"> Fisicoculturismo Varonil hasta 100 Kg </option>
+                <option value="8">Fisicoculturismo Varonil hasta más de 100 Kg </option>
+                <option value="9"> Men’s Physique hasta 170 cm </option>
+                <option value="10"> Men’s Physique hasta 174 cm </option>
+                <option value="11"> Men’s Physique hasta 178 cm </option>
+                <option value="12"> Men’s Physique más de 178 cm </option>
+                <option value="13"> Muscular Men’s Physique Única </option>
+                <option value="14"> Culturismo Clásico “A” hasta 170 cm </option>
+                <option value="15"> Culturismo Clásico “B” más de 170 cm </option>
+                <option value="16"> Classic Physique “A” hasta 168 cm </option>
+                <option value="17"> Classic Physique “B” hasta 172 cm </option>
+                <option value="18"> Classic Physique “C” más de 172 cm </option>
+                <option value="19"> Fisicoculturismo Veteranos 40-44 años hasta 75 Kg </option>
+                <option value="20"> Fisicoculturismo Veteranos 40-44 años más de 75 Kg </option>
+                <option value="21"> Fisicoculturismo Veteranos 45-49 años hasta 75 Kg </option>
+                <option value="22"> Fisicoculturismo Veteranos 45-49 años más de 75 Kg </option>
+                <option value="23"> Fisicoculturismo Veteranos 50-54 años hasta 75 Kg </option>
+                <option value="24"> Fisicoculturismo Veteranos 50-54 años más de 75 Kg </option>
+                <option value="25"> Fisicoculturismo Veteranos 55-59 años hasta 75 Kg </option>
+                <option value="26"> Fisicoculturismo Veteranos 55-59 años más de 75 Kg </option>
+                <option value="27"> Fisicoculturismo Veteranos más de 60 años Única </option>
+                <option value="28"> Men’s Physique Master 40 años hasta 170 cm </option>
+                <option value="29"> Men’s Physique Master 40 años más de 170 cm </option>
+                <option value="30"> Men’s Physique Juvenil hasta 175 cm </option>
+                <option value="31"> Men’s Physique Juvenil más de 175 cm </option>
+                <option value="32"> Fisicoculturismo infantil 18 años hasta 75 Kg </option>
+                <option value="33"> Fisicoculturismo infantil 18 años más de 75 Kg </option>
+                <option value="34"> Men’s Physique Principiantes hasta 170 cm </option>
+                <option value="35"> Men’s Physique Principiantes hasta 175 cm </option>
+                <option value="36"> Men’s Physique Principiantes más de 175 cm </option>
+                <option value="37"> Men’s Physique Novatos hasta 173 cm </option>
+                <option value="38"> Men’s Physique Novatos más de 173 cm </option>
+                <option value="39"> Culturismo Clásico Principiantes “A” hasta 168 cm </option>
+                <option value="40"> Culturismo Clásico Principiante “B” más de 168 cm </option>
+                <option value="41"> Fisicoculturismo Principiantes hasta 65 Kg </option>
+                <option value="42"> Fisicoculturismo Principiantes hasta 70 Kg </option>
+                <option value="43"> Fisicoculturismo Principiantes hasta 75 Kg </option>
+                <option value="44"> Fisicoculturismo Principiantes más de 75 Kg </option>
+                <option value="45"> Fisicoculturismo Novatos hasta 70 Kg </option>
+                <option value="46"> Fisicoculturismo Novatos hasta 75 Kg </option>
+                <option value="47"> Fisicoculturismo Novatos hasta 80 Kg </option>
+                <option value="48"> Fisicoculturismo Novatos más de 80 Kg </option>
+                <option value="49"> Classic Physique Novatos “A” hasta 170 cm </option>
+                <option value="50"> Classic Physique Novatos “B” más de 170 cm </option>
+                <option value="51"> Classic Physique Juvenil Única </option>
+                <option value="52"> Fisicoculturismo Juvenil Única </option>
+                <option value="53"> Absoluto Fisicoculturismo Varonil Clasificados </option>
+                <option value="54"> Absoluto Men’s Physique Clasificados </option>
+                <option value="55"> Absoluto Culturismo Clásico Clasificados </option>
+                <option value="56"> Absoluto Classic Physique Clasificados </option>
+                <option value="57"> Absoluto Women's Physique </option>
+                <option value="58"> Absoluto Fitness Figura Clasificadas </option>
+                <option value="59"> Absoluto Fitness Bikini Clasificadas </option>
+                <option value="60"> Absoluto Fitness Bikini Wellness Clasificadas </option>
+                <option value="61"> Bikini Fitness hasta 156 cm </option>
+                <option value="62"> Bikini Fitness hasta 160 cm </option>
+                <option value="63"> Bikini Fitness hasta 164 cm </option>
+                <option value="64"> Bikini Fitness más de 164 cm </option>
+                <option value="65"> Wellness Fitness hasta 158 cm </option>
+                <option value="66"> Wellness Fitness hasta 164 cm </option>
+                <option value="67"> Wellness Fitness más de 164 cm </option>
+                <option value="68"> Games Fitness Bikini Única </option>
+                <option value="69"> Fitness Figura hasta 160 cm </option>
+                <option value="70"> Fitness Figura más de 160 cm </option>
+                <option value="71"> Woman Physique hasta 158 cm </option>
+                <option value="72"> Woman Physique más de 158 cm </option>
+                <option value="73"> Bikini Fitness Master de 35 a 39 años hasta 158 cm </option>
+                <option value="74"> Bikini Fitness Master de 35 a 39 años más de 158 cm </option>
+                <option value="75"> Bikini Fitness Master más de 40 años Única </option>
+                <option value="76"> Wellness Fitness Master más de 35 años hasta 158 cm </option>
+                <option value="77"> Wellness Fitness Master más de 35 años más de 158 cm </option>
+                <option value="78"> Fitness Figura Master de 35 a 39 años Única </option>
+                <option value="79"> Fitness Figura Master más de 40 años Única </option>
+                <option value="80"> Bikini Fitness Novatas hasta 158 cm </option>
+                <option value="81"> Bikini Fitness Novatas hasta 164 cm </option>
+                <option value="82"> Bikini Fitness Novatas más de 164 cm </option>
+                <option value="83"> Bikini Fitness Principiantes hasta 158 cm </option>
+                <option value="84"> Bikini Fitness Principiantes hasta 164 cm </option>
+                <option value="85"> Bikini Fitness Principiantes más de 164 cm </option>
+                <option value="86"> Wellness Fitness Principiantes hasta 158 cm </option>
+                <option value="87"> Wellness Fitness Principiantes hasta 164 cm </option>
+                <option value="88"> Wellness Fitness Principiantes más de 164 cm </option>
+                <option value="89"> Wellness Fitness Novatas hasta 160 cm </option>
+                <option value="90"> Wellness Fitness Novatas más de 160 cm </option>
+                <option value="91"> Fitness Figura Novatas hasta 160 cm </option>
+                <option value="92"> Fitness Figura Novatas más de 160 cm </option>
+                <option value="93"> Bikini Fitness Juvenil hasta 160 cm </option>
+                <option value="94"> Bikini Fitness Juvenil más de 160 cm </option>
+                <option value="95"> Wellness Fitness Juvenil hasta 160 cm </option>
+                <option value="96"> Wellness Fitness Juvenil más de 160 cm </option>
+                <option value="97"> Fitness Coreográfico Única </option>
+
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Selecciona la segunda categoria para competir (opcional). <br>
+            </label>
+
+            <select name="categoria2">
+                <option value disabled selected>Selecciona el numero de categorias</option>
+                <option value="1"> Fisicoculturismo Varonil hasta 65 Kg </option>
+                <option value="2"> Fisicoculturismo Varonil hasta 70 Kg </option>
+                <option value="3"> Fisicoculturismo Varonil hasta 75 Kg </option>
+                <option value="4"> Fisicoculturismo Varonil hasta 80 Kg </option>
+                <option value="5"> Fisicoculturismo Varonil hasta 85 Kg </option>
+                <option value="6"> Fisicoculturismo Varonil hasta 90 Kg </option>
+                <option value="7"> Fisicoculturismo Varonil hasta 100 Kg </option>
+                <option value="8">Fisicoculturismo Varonil hasta más de 100 Kg </option>
+                <option value="9"> Men’s Physique hasta 170 cm </option>
+                <option value="10"> Men’s Physique hasta 174 cm </option>
+                <option value="11"> Men’s Physique hasta 178 cm </option>
+                <option value="12"> Men’s Physique más de 178 cm </option>
+                <option value="13"> Muscular Men’s Physique Única </option>
+                <option value="14"> Culturismo Clásico “A” hasta 170 cm </option>
+                <option value="15"> Culturismo Clásico “B” más de 170 cm </option>
+                <option value="16"> Classic Physique “A” hasta 168 cm </option>
+                <option value="17"> Classic Physique “B” hasta 172 cm </option>
+                <option value="18"> Classic Physique “C” más de 172 cm </option>
+                <option value="19"> Fisicoculturismo Veteranos 40-44 años hasta 75 Kg </option>
+                <option value="20"> Fisicoculturismo Veteranos 40-44 años más de 75 Kg </option>
+                <option value="21"> Fisicoculturismo Veteranos 45-49 años hasta 75 Kg </option>
+                <option value="22"> Fisicoculturismo Veteranos 45-49 años más de 75 Kg </option>
+                <option value="23"> Fisicoculturismo Veteranos 50-54 años hasta 75 Kg </option>
+                <option value="24"> Fisicoculturismo Veteranos 50-54 años más de 75 Kg </option>
+                <option value="25"> Fisicoculturismo Veteranos 55-59 años hasta 75 Kg </option>
+                <option value="26"> Fisicoculturismo Veteranos 55-59 años más de 75 Kg </option>
+                <option value="27"> Fisicoculturismo Veteranos más de 60 años Única </option>
+                <option value="28"> Men’s Physique Master 40 años hasta 170 cm </option>
+                <option value="29"> Men’s Physique Master 40 años más de 170 cm </option>
+                <option value="30"> Men’s Physique Juvenil hasta 175 cm </option>
+                <option value="31"> Men’s Physique Juvenil más de 175 cm </option>
+                <option value="32"> Fisicoculturismo infantil 18 años hasta 75 Kg </option>
+                <option value="33"> Fisicoculturismo infantil 18 años más de 75 Kg </option>
+                <option value="34"> Men’s Physique Principiantes hasta 170 cm </option>
+                <option value="35"> Men’s Physique Principiantes hasta 175 cm </option>
+                <option value="36"> Men’s Physique Principiantes más de 175 cm </option>
+                <option value="37"> Men’s Physique Novatos hasta 173 cm </option>
+                <option value="38"> Men’s Physique Novatos más de 173 cm </option>
+                <option value="39"> Culturismo Clásico Principiantes “A” hasta 168 cm </option>
+                <option value="40"> Culturismo Clásico Principiante “B” más de 168 cm </option>
+                <option value="41"> Fisicoculturismo Principiantes hasta 65 Kg </option>
+                <option value="42"> Fisicoculturismo Principiantes hasta 70 Kg </option>
+                <option value="43"> Fisicoculturismo Principiantes hasta 75 Kg </option>
+                <option value="44"> Fisicoculturismo Principiantes más de 75 Kg </option>
+                <option value="45"> Fisicoculturismo Novatos hasta 70 Kg </option>
+                <option value="46"> Fisicoculturismo Novatos hasta 75 Kg </option>
+                <option value="47"> Fisicoculturismo Novatos hasta 80 Kg </option>
+                <option value="48"> Fisicoculturismo Novatos más de 80 Kg </option>
+                <option value="49"> Classic Physique Novatos “A” hasta 170 cm </option>
+                <option value="50"> Classic Physique Novatos “B” más de 170 cm </option>
+                <option value="51"> Classic Physique Juvenil Única </option>
+                <option value="52"> Fisicoculturismo Juvenil Única </option>
+                <option value="53"> Absoluto Fisicoculturismo Varonil Clasificados </option>
+                <option value="54"> Absoluto Men’s Physique Clasificados </option>
+                <option value="55"> Absoluto Culturismo Clásico Clasificados </option>
+                <option value="56"> Absoluto Classic Physique Clasificados </option>
+                <option value="57"> Absoluto Women's Physique </option>
+                <option value="58"> Absoluto Fitness Figura Clasificadas </option>
+                <option value="59"> Absoluto Fitness Bikini Clasificadas </option>
+                <option value="60"> Absoluto Fitness Bikini Wellness Clasificadas </option>
+                <option value="61"> Bikini Fitness hasta 156 cm </option>
+                <option value="62"> Bikini Fitness hasta 160 cm </option>
+                <option value="63"> Bikini Fitness hasta 164 cm </option>
+                <option value="64"> Bikini Fitness más de 164 cm </option>
+                <option value="65"> Wellness Fitness hasta 158 cm </option>
+                <option value="66"> Wellness Fitness hasta 164 cm </option>
+                <option value="67"> Wellness Fitness más de 164 cm </option>
+                <option value="68"> Games Fitness Bikini Única </option>
+                <option value="69"> Fitness Figura hasta 160 cm </option>
+                <option value="70"> Fitness Figura más de 160 cm </option>
+                <option value="71"> Woman Physique hasta 158 cm </option>
+                <option value="72"> Woman Physique más de 158 cm </option>
+                <option value="73"> Bikini Fitness Master de 35 a 39 años hasta 158 cm </option>
+                <option value="74"> Bikini Fitness Master de 35 a 39 años más de 158 cm </option>
+                <option value="75"> Bikini Fitness Master más de 40 años Única </option>
+                <option value="76"> Wellness Fitness Master más de 35 años hasta 158 cm </option>
+                <option value="77"> Wellness Fitness Master más de 35 años más de 158 cm </option>
+                <option value="78"> Fitness Figura Master de 35 a 39 años Única </option>
+                <option value="79"> Fitness Figura Master más de 40 años Única </option>
+                <option value="80"> Bikini Fitness Novatas hasta 158 cm </option>
+                <option value="81"> Bikini Fitness Novatas hasta 164 cm </option>
+                <option value="82"> Bikini Fitness Novatas más de 164 cm </option>
+                <option value="83"> Bikini Fitness Principiantes hasta 158 cm </option>
+                <option value="84"> Bikini Fitness Principiantes hasta 164 cm </option>
+                <option value="85"> Bikini Fitness Principiantes más de 164 cm </option>
+                <option value="86"> Wellness Fitness Principiantes hasta 158 cm </option>
+                <option value="87"> Wellness Fitness Principiantes hasta 164 cm </option>
+                <option value="88"> Wellness Fitness Principiantes más de 164 cm </option>
+                <option value="89"> Wellness Fitness Novatas hasta 160 cm </option>
+                <option value="90"> Wellness Fitness Novatas más de 160 cm </option>
+                <option value="91"> Fitness Figura Novatas hasta 160 cm </option>
+                <option value="92"> Fitness Figura Novatas más de 160 cm </option>
+                <option value="93"> Bikini Fitness Juvenil hasta 160 cm </option>
+                <option value="94"> Bikini Fitness Juvenil más de 160 cm </option>
+                <option value="95"> Wellness Fitness Juvenil hasta 160 cm </option>
+                <option value="96"> Wellness Fitness Juvenil más de 160 cm </option>
+                <option value="97"> Fitness Coreográfico Única </option>
+
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Selecciona la tercer categoria para competir (opcional). <br>
+            </label>
+
+            <select name="categoria3">
+                <option value disabled selected>Selecciona el numero de categorias</option>
+                <option value="1"> Fisicoculturismo Varonil hasta 65 Kg </option>
+                <option value="2"> Fisicoculturismo Varonil hasta 70 Kg </option>
+                <option value="3"> Fisicoculturismo Varonil hasta 75 Kg </option>
+                <option value="4"> Fisicoculturismo Varonil hasta 80 Kg </option>
+                <option value="5"> Fisicoculturismo Varonil hasta 85 Kg </option>
+                <option value="6"> Fisicoculturismo Varonil hasta 90 Kg </option>
+                <option value="7"> Fisicoculturismo Varonil hasta 100 Kg </option>
+                <option value="8">Fisicoculturismo Varonil hasta más de 100 Kg </option>
+                <option value="9"> Men’s Physique hasta 170 cm </option>
+                <option value="10"> Men’s Physique hasta 174 cm </option>
+                <option value="11"> Men’s Physique hasta 178 cm </option>
+                <option value="12"> Men’s Physique más de 178 cm </option>
+                <option value="13"> Muscular Men’s Physique Única </option>
+                <option value="14"> Culturismo Clásico “A” hasta 170 cm </option>
+                <option value="15"> Culturismo Clásico “B” más de 170 cm </option>
+                <option value="16"> Classic Physique “A” hasta 168 cm </option>
+                <option value="17"> Classic Physique “B” hasta 172 cm </option>
+                <option value="18"> Classic Physique “C” más de 172 cm </option>
+                <option value="19"> Fisicoculturismo Veteranos 40-44 años hasta 75 Kg </option>
+                <option value="20"> Fisicoculturismo Veteranos 40-44 años más de 75 Kg </option>
+                <option value="21"> Fisicoculturismo Veteranos 45-49 años hasta 75 Kg </option>
+                <option value="22"> Fisicoculturismo Veteranos 45-49 años más de 75 Kg </option>
+                <option value="23"> Fisicoculturismo Veteranos 50-54 años hasta 75 Kg </option>
+                <option value="24"> Fisicoculturismo Veteranos 50-54 años más de 75 Kg </option>
+                <option value="25"> Fisicoculturismo Veteranos 55-59 años hasta 75 Kg </option>
+                <option value="26"> Fisicoculturismo Veteranos 55-59 años más de 75 Kg </option>
+                <option value="27"> Fisicoculturismo Veteranos más de 60 años Única </option>
+                <option value="28"> Men’s Physique Master 40 años hasta 170 cm </option>
+                <option value="29"> Men’s Physique Master 40 años más de 170 cm </option>
+                <option value="30"> Men’s Physique Juvenil hasta 175 cm </option>
+                <option value="31"> Men’s Physique Juvenil más de 175 cm </option>
+                <option value="32"> Fisicoculturismo infantil 18 años hasta 75 Kg </option>
+                <option value="33"> Fisicoculturismo infantil 18 años más de 75 Kg </option>
+                <option value="34"> Men’s Physique Principiantes hasta 170 cm </option>
+                <option value="35"> Men’s Physique Principiantes hasta 175 cm </option>
+                <option value="36"> Men’s Physique Principiantes más de 175 cm </option>
+                <option value="37"> Men’s Physique Novatos hasta 173 cm </option>
+                <option value="38"> Men’s Physique Novatos más de 173 cm </option>
+                <option value="39"> Culturismo Clásico Principiantes “A” hasta 168 cm </option>
+                <option value="40"> Culturismo Clásico Principiante “B” más de 168 cm </option>
+                <option value="41"> Fisicoculturismo Principiantes hasta 65 Kg </option>
+                <option value="42"> Fisicoculturismo Principiantes hasta 70 Kg </option>
+                <option value="43"> Fisicoculturismo Principiantes hasta 75 Kg </option>
+                <option value="44"> Fisicoculturismo Principiantes más de 75 Kg </option>
+                <option value="45"> Fisicoculturismo Novatos hasta 70 Kg </option>
+                <option value="46"> Fisicoculturismo Novatos hasta 75 Kg </option>
+                <option value="47"> Fisicoculturismo Novatos hasta 80 Kg </option>
+                <option value="48"> Fisicoculturismo Novatos más de 80 Kg </option>
+                <option value="49"> Classic Physique Novatos “A” hasta 170 cm </option>
+                <option value="50"> Classic Physique Novatos “B” más de 170 cm </option>
+                <option value="51"> Classic Physique Juvenil Única </option>
+                <option value="52"> Fisicoculturismo Juvenil Única </option>
+                <option value="53"> Absoluto Fisicoculturismo Varonil Clasificados </option>
+                <option value="54"> Absoluto Men’s Physique Clasificados </option>
+                <option value="55"> Absoluto Culturismo Clásico Clasificados </option>
+                <option value="56"> Absoluto Classic Physique Clasificados </option>
+                <option value="57"> Absoluto Women's Physique </option>
+                <option value="58"> Absoluto Fitness Figura Clasificadas </option>
+                <option value="59"> Absoluto Fitness Bikini Clasificadas </option>
+                <option value="60"> Absoluto Fitness Bikini Wellness Clasificadas </option>
+                <option value="61"> Bikini Fitness hasta 156 cm </option>
+                <option value="62"> Bikini Fitness hasta 160 cm </option>
+                <option value="63"> Bikini Fitness hasta 164 cm </option>
+                <option value="64"> Bikini Fitness más de 164 cm </option>
+                <option value="65"> Wellness Fitness hasta 158 cm </option>
+                <option value="66"> Wellness Fitness hasta 164 cm </option>
+                <option value="67"> Wellness Fitness más de 164 cm </option>
+                <option value="68"> Games Fitness Bikini Única </option>
+                <option value="69"> Fitness Figura hasta 160 cm </option>
+                <option value="70"> Fitness Figura más de 160 cm </option>
+                <option value="71"> Woman Physique hasta 158 cm </option>
+                <option value="72"> Woman Physique más de 158 cm </option>
+                <option value="73"> Bikini Fitness Master de 35 a 39 años hasta 158 cm </option>
+                <option value="74"> Bikini Fitness Master de 35 a 39 años más de 158 cm </option>
+                <option value="75"> Bikini Fitness Master más de 40 años Única </option>
+                <option value="76"> Wellness Fitness Master más de 35 años hasta 158 cm </option>
+                <option value="77"> Wellness Fitness Master más de 35 años más de 158 cm </option>
+                <option value="78"> Fitness Figura Master de 35 a 39 años Única </option>
+                <option value="79"> Fitness Figura Master más de 40 años Única </option>
+                <option value="80"> Bikini Fitness Novatas hasta 158 cm </option>
+                <option value="81"> Bikini Fitness Novatas hasta 164 cm </option>
+                <option value="82"> Bikini Fitness Novatas más de 164 cm </option>
+                <option value="83"> Bikini Fitness Principiantes hasta 158 cm </option>
+                <option value="84"> Bikini Fitness Principiantes hasta 164 cm </option>
+                <option value="85"> Bikini Fitness Principiantes más de 164 cm </option>
+                <option value="86"> Wellness Fitness Principiantes hasta 158 cm </option>
+                <option value="87"> Wellness Fitness Principiantes hasta 164 cm </option>
+                <option value="88"> Wellness Fitness Principiantes más de 164 cm </option>
+                <option value="89"> Wellness Fitness Novatas hasta 160 cm </option>
+                <option value="90"> Wellness Fitness Novatas más de 160 cm </option>
+                <option value="91"> Fitness Figura Novatas hasta 160 cm </option>
+                <option value="92"> Fitness Figura Novatas más de 160 cm </option>
+                <option value="93"> Bikini Fitness Juvenil hasta 160 cm </option>
+                <option value="94"> Bikini Fitness Juvenil más de 160 cm </option>
+                <option value="95"> Wellness Fitness Juvenil hasta 160 cm </option>
+                <option value="96"> Wellness Fitness Juvenil más de 160 cm </option>
+                <option value="97"> Fitness Coreográfico Única </option>
+
+            </select>
+        </div>
+
+        <br> <br>
+
+        <input type="submit" value="Enviar datos" class="enviar-borrar">
+        <input type="reset" value="Boarrar Datos" class="enviar-borrar"><br> <br>
+        <a href="Index.html"> Regresar al inicio de sesión </a>
+    </form>
+
+</body>
+
+</html>
