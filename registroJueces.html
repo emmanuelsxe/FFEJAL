@@ -9,12 +9,67 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap');
     </style>
-    <title>Registro de Participantes</title>
+    <title>Registro de Jueces</title>
 </head>
 
 <body>
     <h1>REGISTRO FFEJAL</h1>
-    <h2>Información Personal</h2>
+
+    <form action="" method="post">
+
+            <h2>Información Personal</h2>
+            <p> Ingresa tu información personal </p>
+        
+        <div>
+            <label> Nombre(s)* <br>
+                <input type="text" name="nombreJuez" placeholder="Nombre(s)" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label> Apellido Paterno* <br>
+                <input type="text" name="apPaternoJuez" placeholder="Apellido Paterno" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label> Apellido Materno <br>
+                <input type="text" name="apMaternoJuez" placeholder="Apellido Materno">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Correo electronico* <br>
+                <input type="email" name="emailJuez" placeholder="Correo Electronico" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Telefono Celular* <br>
+                <input type="tel" name="celularJuez" placeholder="Telefono Celular" required>
+            </label>
+        </div>
+
+        <br> <br>
+
+        <input type="submit" value="Enviar datos" class="enviar-borrar">
+        <input type="reset" value="Boarrar Datos" class="enviar-borrar"><br> <br>
+
+    </form>
+
+        <nav>
+            <a href="Index.html"> Regresar al inicio de sesión </a>
+        </nav>
 
 </body>
 
