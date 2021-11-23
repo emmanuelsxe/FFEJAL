@@ -18,7 +18,7 @@
     <h1>REGISTRO FFEJAL</h1>
     <h2>Información Personal</h2>
 
-    <form action="" method="post">
+    <form action="conexion.php" method="post">
 
         <p> Ingresa tu información personal. </p>
 
@@ -26,7 +26,7 @@
         <div>
             <label>
                 Nombre* <br>
-                <input type="text" name="name" placeholder="Nombre(s)" required>
+                <input type="text" name="nombreC" placeholder="Nombre(s)" required>
             </label>
         </div>
 
@@ -35,7 +35,7 @@
         <div>
             <label>
                 Apellido Paterno* <br>
-                <input type="text" name="apellidoPaterno" placeholder="Apellido Paterno" required>
+                <input type="text" name="apellidoPaternoC" placeholder="Apellido Paterno" required>
             </label>
         </div>
 
@@ -44,7 +44,25 @@
         <div>
             <label>
                 Apellido Materno <br>
-                <input type="text" name="apellidoMaterno" placeholder="Apellido Materno">
+                <input type="text" name="apellidoMaternoC" placeholder="Apellido Materno">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Correo electronico* <br>
+                <input type="email" name="correoElectronicoC" placeholder="tucorreo@ejemplo.com" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Password* <br>
+                <input type="password" name="passwordC" placeholder="Password" required>
             </label>
         </div>
 
@@ -53,11 +71,11 @@
         <div>
             <label>
                 Sexo* <br>
-                <input type="radio" name="sexo" value="Hombre" required> Hombre <br>
+                <input type="radio" name="sexoC" value="Hombre" required> Hombre <br>
             </label>
 
             <label>
-                <input type="radio" name="sexo" value="Mujer"> Mujer
+                <input type="radio" name="sexoC" value="Mujer"> Mujer
             </label>
         </div>
 
@@ -66,7 +84,7 @@
         <div>
             <label>
                 Lugar de Nacimiento* <br>
-                <select name="estado" required>
+                <select name="estadoNacC" required>
                     <option value disabled selected>Selecciona el estado</option>
                     <option value="Aguascalientes">Aguascalientes</option>
                     <option value="Baja California">Baja California</option>
@@ -110,7 +128,7 @@
         <div>
             <label>
                 Fecha de Nacimiento* <br>
-                <input type="date" name="fechaNacimiento" required>
+                <input type="date" name="fechaNacimientoC" required>
             </label>
         </div>
 
@@ -119,7 +137,7 @@
         <div>
             <label>
                 Edad* <br>
-                <input type="number" name="edad" placeholder="Edad" min="0" required>
+                <input type="number" name="edadC" placeholder="Edad" min="0" required>
             </label>
         </div>
 
@@ -128,7 +146,7 @@
         <div>
             <label>
                 CURP* <br>
-                <input type="text" name="curp" placeholder="CURP" minlength="18" maxlength="18" required>
+                <input type="text" name="curpC" placeholder="CURP" minlength="18" maxlength="18" required>
                 <br>
                 Sí no conoces tu CURP, puedes consultarla <a href="https://www.gob.mx/curp/" target="_blank"
                     title="CURP"> aqui </a>
@@ -141,7 +159,7 @@
         <div>
             <label>
                 Grado máximo de estudios* <br>
-                <select name="gradoEstudios" required>
+                <select name="gradoEstudiosC" required>
                     <option value disabled selected> Elige </option>
                     <option value="Primaria"> Primaria </option>
                     <option value="Secundaria"> Secundaria </option>
@@ -159,11 +177,11 @@
         <div>
             <label>
                 ¿Actualmente estas estudiando? <br>
-                <input type="radio" name="estudio" value="Si" required> Si
+                <input type="radio" name="estudioC" value="Si" required> Si
             </label>
             <br>
             <label>
-                <input type="radio" name="estudio" value="No"> No
+                <input type="radio" name="estudioC" value="No"> No
             </label>
 
         </div>
@@ -172,19 +190,12 @@
 
         <h2>Datos de contacto</h2>
 
-        <div>
-            <label>
-                Correo electronico* <br>
-                <input type="email" name="correoElectronico" placeholder="tucorreo@ejemplo.com" required>
-            </label>
-        </div>
-
         <br>
 
         <div>
             <label>
                 Télefono Celular* <br>
-                <input type="tel" name="celular" placeholder="Número de celular" required>
+                <input type="tel" name="celularC" placeholder="Número de celular" required>
             </label>
         </div>
 
@@ -193,7 +204,7 @@
         <div>
             <label>
                 Télefono Fijo <br>
-                <input type="tel" name="fijo" placeholder="Número Fijo (casa, negocio)">
+                <input type="tel" name="fijoC" placeholder="Número Fijo (casa, negocio)">
             </label>
         </div>
 
@@ -202,7 +213,7 @@
         <div>
             <label>
                 Facebook <br>
-                <input type="text" name="facebook" placeholder="Facebook">
+                <input type="text" name="facebookC" placeholder="Facebook">
             </label>
         </div>
 
@@ -211,7 +222,7 @@
         <div>
             <label>
                 Twitter <br>
-                <input type="text" name="twitter" placeholder="Twitter">
+                <input type="text" name="twitterC" placeholder="Twitter">
             </label>
         </div>
 
@@ -771,7 +782,7 @@
 
         <br>
 
-        <div>  
+        <div>
             <label>
                 Selecciona la tercer categoria para competir (opcional). <br>
             </label>
@@ -881,8 +892,9 @@
 
         <br> <br>
 
-        <input type="submit" value="Enviar datos" class="enviar-borrar">
-        <input type="reset" value="Boarrar Datos" class="enviar-borrar"><br> <br>
+        <button type="submit"  name="datosParticipantes" class="enviar-borrar" >Enviar Datos </button> 
+        <button type="reset" nanem="borrarFormulario" class="enviar-borrar" > Borrar Formulario </button>
+        
     </form>
 
     <nav>
