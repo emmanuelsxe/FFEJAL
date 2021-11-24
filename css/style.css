@@ -1,40 +1,154 @@
-select, input{
-  border-radius: 6px;
-}
 
-h1,h2{
+
+h1,
+h2 {
   text-align: center;
 }
 
-a{
+a {
   color: orange;
   text-decoration: none;
 }
 
+.contenedor{
+width: 95%;
+max-width: 120rem;
+margin: 0 auto;
+}
 
+.seccion{
+margin-top:2.5rem;
+margin-bottom: 2.5rem;
+}
 
-.inicio-sesion{
+.inicio-sesion {
   text-align: center;
-      margin-left: auto;
-    margin-right: auto;
-}
-
-label{
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 
-table {
-    display: table;
-    border-collapse: separate;
-    box-sizing: border-box;
-    text-indent: initial;
-    border-spacing: 2px;
-    border-color: gray;
-
-} 
-
-label{
-  font-weight: bold;
+legend {
+  box-sizing: border-box;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
 }
+
+.formulario p{
+ 
+    font-size: 1.4rem;
+    color:  #333333;
+;
+    margin: 2rem 0 0 0;
+
+}
+
+ .formulario legend {
+    font-size: 2rem;
+    color: #333333;
+  }
+
+ .formulario label {
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .formulario input:not([type="submit"]),
+  textarea,
+  select {
+    padding: 1rem;
+    display: block;
+    width: 95%;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .formulario textarea {
+    height: 20rem;
+  }
+
+  .formulario .forma-contacto {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+
+.formulario input[type="radio"] {
+    margin: 0;
+    width: auto;
+  } 
+
+
+
+
+fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+}
+
+
+
+.boton-verde {
+  background-color: #71b100;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  display: inline-block;
+  border: none;
+}
+
+.boton-rojo {
+  background-color: #f33b0f;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  display: inline-block;
+  border: none;
+}
+
+.radio-especial {
+        max-width: 30rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+   input {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
