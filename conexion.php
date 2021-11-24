@@ -85,5 +85,4 @@ function insertarConcursante($conn){
     mysqli_close($conn);
 
 }
-
 ?>
