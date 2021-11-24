@@ -23,63 +23,52 @@
     <form method="POST" class="inicio-sesion">
         <h1>Iniciar Sesión</h1>
 
-        <div class="contenedor">
-            <table>
-                <tr>
-                    <td>
-                        <div class="input-contenedor">
-                            <i class="fas fa-envelope"></i>
-                    </td>
+        <div class="contenedor campo">
 
-                    <td>
-                        <label for"mail">
-                            <input type="email" id="mail" name="user_mail" placeholder="Ingresa tu correo" required>
-                        </label>
-                    </td>
-                </tr>
+            <label for"mail">
+                <input type="email" id="mail" name="user_mail" placeholder="Ingresa tu correo" required>
+            </label>
+
+            <label></label>
+            
+
         </div>
 
-        <tr>
-            <td>
-                <div class="input-contenedor">
-                    <i class="fas fa-key"></i>
-            </td>
-
-            <td>
-                <label>
-                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
-                </label>
-            </td>
-
-            <td>
-                <button class="botonMostrar" type="button" onclick="mostrarContrasena()">Mostrar
-                    Contraseña</button>
-                <script>
-                    function mostrarContrasena() {
-                        var tipo = document.getElementById("password");
-                        if (tipo.type == "password") {
-                            tipo.type = "text";
-                        } else {
-                            tipo.type = "password";
-                        }
-                    }
-                </script>
-            </td>
-        </tr>
+        <div class="campo">
+            <label> </label>
+            <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+            <span> Mostrar </span>
         </div>
 
-        <button type="submit" name="iniciar_sesion" value="iniciar_sesion">Iniciar Sesión </button>
+        <!--<button class="botonMostrar" type="button" onclick="mostrarContrasena()">Mostrar
+            Contraseña</button>-->
+
+        <script>
+            document.querySelector('.campo span').addEventListener('click', e => {
+                const passwordInput = document.querySelector('#password');
+                if (e.target.classList.contains('show')) {
+                    e.target.classList.remove('show');
+                    e.target.textContent = 'Ocultar';
+                    passwordInput.type = 'text';
+                } else {
+                    e.target.classList.add('show');
+                    e.target.textContent = 'Mostrar';
+                    passwordInput.type = 'password';
+                }
+            });
+        </script>
+
+
+        <button type="submit" name="iniciar_sesion" value="iniciar_sesion" class="boton-verde">Iniciar Sesión </button>
 
 
         </div>
-        </table>
-
 
     </form>
 
     <br><br>
 
-    <nav>
+    <nav style="text-align:center">
         <p> ¿Aún no te haz registrado? </p>
         <a href="registroParticipantes.html"> Ingresa aquí para Registrarte </a>
 

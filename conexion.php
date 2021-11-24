@@ -160,6 +160,7 @@ function insertarConcursante($conn)
 
     mysqli_query($conn, $consulta);
     mysqli_close($conn);
+    header("Location: Index.html");
 }
 
 
@@ -194,4 +195,5 @@ function insertarJueces($conn)
 
     mysqli_query($conn, $consulta);
     mysqli_close($conn);
+    header("Location: Index.html");
 }
