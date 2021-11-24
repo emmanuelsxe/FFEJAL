@@ -15,61 +15,62 @@
 <body>
     <h1>REGISTRO FFEJAL</h1>
 
-    <form action="conexion.php" method="post" class="form">
+    <form action="conexion.php" method="post" class="formulario">
 
-        <h2>Información Personal</h2>
-        <p> Ingresa tu información personal </p>
-        
-        <div>
-            <label> Nombre(s)* <br>
-                <input type="text" name="nombreJuez" placeholder="Nombre(s)" required>
-            </label>
-        </div>
+        <fieldset>
+            <legend> Información Personal </legend> 
+            <p> Ingresa tu información personal </p>
 
-        <br>
+            <div>
+                <label> Nombre(s)* <br>
+                    <input type="text" name="nombreJuez" placeholder="Nombre(s)" required>
+                </label>
+            </div>
 
-        <div>
-            <label> Apellido Paterno* <br>
-                <input type="text" name="apPaternoJuez" placeholder="Apellido Paterno" required>
-            </label>
-        </div>
+            <br>
 
-        <br>
+            <div>
+                <label> Apellido Paterno* <br>
+                    <input type="text" name="apPaternoJuez" placeholder="Apellido Paterno" required>
+                </label>
+            </div>
 
-        <div>
-            <label> Apellido Materno <br>
-                <input type="text" name="apMaternoJuez" placeholder="Apellido Materno">
-            </label>
-        </div>
+            <br>
 
-        <br>
+            <div>
+                <label> Apellido Materno <br>
+                    <input type="text" name="apMaternoJuez" placeholder="Apellido Materno">
+                </label>
+            </div>
 
-        <div>
-            <label>
-                Correo electronico* <br>
-                <input type="email" name="emailJuez" placeholder="Correo Electronico" required>
-            </label>
-        </div>
+            <br>
 
-        <br>
+            <div>
+                <label>
+                    Correo electronico* <br>
+                    <input type="email" name="emailJuez" placeholder="Correo Electronico" required>
+                </label>
+            </div>
 
-        <div>
-            <label>
-                Telefono Celular* <br>
-                <input type="tel" name="celularJuez" placeholder="Telefono Celular" required>
-            </label>
-        </div>
+            <br>
 
-        <br> <br>
+            <div>
+                <label>
+                    Telefono Celular* <br>
+                    <input type="tel" name="celularJuez" placeholder="Telefono Celular" required>
+                </label>
+            </div>
 
-        <input type="submit" value="Enviar datos" class="boton-verde">
-        <input type="reset" value="Boarrar Datos" class="boton-rojo"><br> <br>
+            <br> <br>
+        </fieldset>
 
+        <button type="submit" name="datosJueces" value="Enviar datos" class="boton-verde"> Enviar Datos </button>
+        <button type="reset" name="Boarrar Datos" class="boton-rojo"> Limpiar Formulario </button><br> <br>
     </form>
 
-        <nav>
-            <a href="Index.html"> Regresar al inicio de sesión </a>
-        </nav>
+    <nav>
+        <a href="Index.html"> Regresar al inicio de sesión </a>
+    </nav>
 
 </body>
 

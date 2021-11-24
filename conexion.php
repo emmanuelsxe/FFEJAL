@@ -1,7 +1,7 @@
 <?php
 
 
-$conn = mysqli_connect('127.0.0.1 ', 'root','','bd_ffejal') or die (mysqli_connect_error($mysqli));
+$conn = mysqli_connect('127.0.0.1 ', 'root', '', 'bd_ffejal') or die(mysqli_connect_error($mysqli));
 
 if (!$conn) {
     echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -9,15 +9,22 @@ if (!$conn) {
     echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
     exit;
 }
-/*function diferencia($conn){
-    if(isset($_POST['datosParticipantes'])){
+
+diferencia($conn);
+
+function diferencia($conn)
+{
+    if (isset($_POST['datosParticipantes'])) {
         insertarConcursante($conn);
     }
-} */
+    if (isset($_POST['datosJueces'])) {
+        insertarJueces($conn);
+    }
+}
 
-insertarConcursante($conn);
 
-function insertarConcursante($conn){
+function insertarConcursante($conn)
+{
 
     $nombreC = $_POST['nombreC'];
     $apellidoPaternoC = $_POST['apellidoPaternoC'];
@@ -61,28 +68,130 @@ function insertarConcursante($conn){
     $categoria3 = $_POST['categoria3'];
 
 
-    $consulta = "INSERT INTO concursantes (nombre_concursante, apPaternoConcu, apMaternoConcu, emailConcur, passwordConcur,
-    sexoConcu, lugarNacimientoConcu, fechaNacimientoConcur, edadConcur, curpConcur, estudiosConcur, estudiaConcur,
-    estudiaConcur, celularConcur, telFijoConcur, facebookConcur, twitterConcur,
-    calleConcur, numExtConcur, numIntConcur, coloniaConcur, municipioConcur, estadoConcur, cpConcur,
-    nombreGim, calleGim, numExtGim, numIntGim, coloniaGim, municipioGim, estadoGim, cpGim,
-    nombreEntrenador, apePatEntrenador, apMatEntrenador, celularEntrenador,
-    estadoRepresentado, primerCategoria, segundaCategoria, tercerCategoria )
+    $consulta = "INSERT INTO concursantes (
+    nombre_concursante, 
+    apPaternoConcu, 
+    apMaternoConcu, 
+    emailConcur,
+    passwordConcur,
+    sexoConcu, 
+    lugarNacimientoConcu, 
+    fechaNacimientoConcur, 
+    edadConcur, 
+    curpConcur, 
+    estudiosConcur, 
+    estudiaConcur, 
+    celularConcur, 
+    telFijoConcur,
+    facebookConcur, 
+    twitterConcur, 
+    medio,
+    calleConcur, 
+    numExtConcur, 
+    numIntConcur, 
+    coloniaConcur, 
+    municipioConcur, 
+    estadoConcur, 
+    cpConcur,
+    nombreGim, 
+    calleGim, 
+    numExtGim, 
+    numIntGim, 
+    coloniaGim, 
+    municipioGim, 
+    estadoGim, 
+    cpGim,
+    nombreEntrenador, 
+    apePatEntrenador, 
+    apMatEntrenador, 
+    celularEntrenador,
+    estadoRepresentado, 
+    primerCategoria, 
+    segundaCategoria, 
+    tercerCategoria 
+    )
 
-    VALUES ('$nombreC', '$apellidoPaternoC', '$apellidoMaternoC', '$correoElectronicoC', '$passwordC',
-     '$sexoC', '$estadoNacC', '$fechaNacimientoC', '$edadC', '$curpC', '$gradoEstudiosC', '$estudioC',
-     '$celularC', '$fijoC', '$facebookC', '$twitterC','$medio', 
-     '$calleConcur', '$numExtConcur', '$numIntConcur', '$coloniaConcur', '$municipioConcur', '$estadoConcur', '$cpConcur',
-     '$nombreGimnasio', '$calleGimnasio', '$numExtGim', '$numIntGim', '$coloniaGim', '$municipioGim', '$estadoGim', '$cpGim',
-     '$nombreEntrenador', '$apPaternoEntrenador', '$apMaternoEntrenador', '$celEntrenador',
-     '$estadoRepresentado', '$categoria1', '$categoria2', '$categoria3')" ;
+    VALUES (
+     '$nombreC',
+     '$apellidoPaternoC',
+     '$apellidoMaternoC', 
+     '$correoElectronicoC', 
+     '$passwordC',
+     '$sexoC', 
+     '$estadoNacC', 
+     '$fechaNacimientoC', 
+     '$edadC', 
+     '$curpC', 
+     '$gradoEstudiosC', 
+     '$estudioC',
+     '$celularC', 
+     '$fijoC', 
+     '$facebookC', 
+     '$twitterC',
+     '$medio', 
+     '$calleConcur', 
+     '$numExtConcur', 
+     '$numIntConcur', 
+     '$coloniaConcur',
+     '$municipioConcur',
+     '$estadoConcur',
+     '$cpConcur',
+     '$nombreGimnasio', 
+     '$calleGimnasio', 
+     '$numExtGim', 
+     '$numIntGim', 
+     '$coloniaGim', 
+     '$municipioGim', 
+     '$estadoGim', 
+     '$cpGim',
+     '$nombreEntrenador', 
+     '$apPaternoEntrenador', 
+     '$apMaternoEntrenador', 
+     '$celEntrenador',
+     '$estadoRepresentado', 
+     '$categoria1', 
+     '$categoria2', 
+     '$categoria3'
+     )";
 
 
-    echo "Éxito: Se realizó una conexión apropiada a MySQL!" . PHP_EOL;
+    echo "Éxito: Se realizó el registro apropiado!" . PHP_EOL;
     echo "Información del host: " . mysqli_get_host_info($conn) . PHP_EOL;
 
     mysqli_query($conn, $consulta);
     mysqli_close($conn);
-
 }
-?>
+
+
+function insertarJueces($conn)
+{
+
+    $nombreJuez = $_POST['nombreJuez'];
+    $apPatJuez = $_POST['apPaternoJuez'];
+    $apMatJuez = $_POST['apMaternoJuez'];
+    $emailJuez = $_POST['emailJuez'];
+    $celJuez = $_POST['celularJuez'];
+
+    $consulta = "INSERT INTO jueces (
+        nombreJuez,
+        apPaternoJuez,
+        apMaternoJuez,
+        emailJuez,
+        celularJuez
+        )
+
+        VALUES (
+            '$nombreJuez',
+            '$apPatJuez',
+            '$apMatJuez',
+            '$emailJuez',
+            '$celJuez'
+    )";
+
+
+    echo "Éxito: Se realizó el registro apropiado! Jueces" . PHP_EOL;
+    echo "Información del host: " . mysqli_get_host_info($conn) . PHP_EOL;
+
+    mysqli_query($conn, $consulta);
+    mysqli_close($conn);
+}
