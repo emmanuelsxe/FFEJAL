@@ -171,7 +171,7 @@ function insertarConcursante($conn)
     include("Index.php");
     ?>
 
-    <h1>Juez Registrado con exito</h1>
+    <h1>Concursante Registrado con exito</h1>
     <?php
 }
 
