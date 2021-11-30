@@ -1,7 +1,8 @@
 <?php
 
+// $conn = mysqli_connect('127.0.0.1 ', 'root', '', 'bd_ffejal') or die(mysqli_connect_error($mysqli));
 
-$conn = mysqli_connect('127.0.0.1 ', 'root', '', 'bd_ffejal') or die(mysqli_connect_error($mysqli));
+$conn = mysqli_connect('localhost', 'root', 'root', 'bd_ffejal') or die(mysqli_connect_error($mysqli));
 
 if (!$conn) {
     echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -66,6 +67,7 @@ function insertarConcursante($conn)
     $categoria1 = $_POST['categoria1'];
     $categoria2 = $_POST['categoria2'];
     $categoria3 = $_POST['categoria3'];
+    $rol_id = $_POST['rolConcursante'];
 
 
     $consulta = "INSERT INTO concursantes (
@@ -98,8 +100,8 @@ function insertarConcursante($conn)
     numExtGim, 
     numIntGim, 
     coloniaGim, 
-    municipioGim, 
-    estadoGim, 
+    municipioGim,
+    estadoGim,
     cpGim,
     nombreEntrenador, 
     apePatEntrenador, 
@@ -108,7 +110,8 @@ function insertarConcursante($conn)
     estadoRepresentado, 
     primerCategoria, 
     segundaCategoria, 
-    tercerCategoria 
+    tercerCategoria,
+    rol_id 
     )
 
     VALUES (
@@ -151,7 +154,8 @@ function insertarConcursante($conn)
      '$estadoRepresentado', 
      '$categoria1', 
      '$categoria2', 
-     '$categoria3'
+     '$categoria3',
+     '$rol_id'
      )";
 
 
@@ -160,7 +164,15 @@ function insertarConcursante($conn)
 
     mysqli_query($conn, $consulta);
     mysqli_close($conn);
-    header("Location: Index.html");
+    //header("Location: Index.html");
+
+    ?>
+    <?php
+    include("Index.php");
+    ?>
+
+    <h1>Juez Registrado con exito</h1>
+    <?php
 }
 
 
@@ -171,14 +183,18 @@ function insertarJueces($conn)
     $apPatJuez = $_POST['apPaternoJuez'];
     $apMatJuez = $_POST['apMaternoJuez'];
     $emailJuez = $_POST['emailJuez'];
+    $passJuez = $_POST['passJuez'];
     $celJuez = $_POST['celularJuez'];
+    $rol_id = $_POST['rolJuez'];
 
     $consulta = "INSERT INTO jueces (
         nombreJuez,
         apPaternoJuez,
         apMaternoJuez,
         emailJuez,
-        celularJuez
+        passwordJuez,
+        celularJuez,
+        rol_id
         )
 
         VALUES (
@@ -186,7 +202,9 @@ function insertarJueces($conn)
             '$apPatJuez',
             '$apMatJuez',
             '$emailJuez',
-            '$celJuez'
+            '$passJuez',
+            '$celJuez',
+            '$rol_id'
     )";
 
 
@@ -195,5 +213,11 @@ function insertarJueces($conn)
 
     mysqli_query($conn, $consulta);
     mysqli_close($conn);
-    header("Location: Index.html");
+    ?>
+    <?php
+    include("Index.php");
+    ?>
+
+    <h1>Juez Registrado con exito</h1>
+    <?php
 }

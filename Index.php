@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
     </header>
 
 
-    <form method="POST" class="inicio-sesion">
+    <form action="validacion.php" method="POST" class="inicio-sesion">
         <h1>Iniciar Sesión</h1>
 
         <div class="contenedor campo">
